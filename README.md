@@ -40,3 +40,5 @@ Instrucciones en español
 2. Los datos de registro servirán para el Login ya que estos datos quedan almacenados en la base de datos MongoDB.
 3. Se pueden llenar tareas en cualquier fecha y estos registros quedaran guardados para futura consulta
 4. La edición se dejó para borrar las tareas que el usuario quiera, por tiempo no pude poner el update para modificar la tarea a elección ni agregar locales para tener varios idiomas con su botón de traducción
+
+La prueba se desarrolló con Next.js usando React en el front-end, no he trabajado con Angular pero me comprometo a estudiarlo. En el backend se creo un Cluster gratuito con una base de datos en MongoDB y la URI de conexión se dejó en una variable de entorno, para las API se crearon las de Login, Registro y envío de tareas registradas en la To Do List a la base de datos.
