@@ -1,18 +1,18 @@
 "use client";
 
-import { useState } from 'react';
-import LoginForm from '../components/LoginForm';
-import ToDoList from '../components/ToDoList';
+import { useState } from "react";
+import LoginForm from "../components/LoginForm";
+import ToDoList from "../components/ToDoList";
 
 export default function Home() {
   const [loggedIn, setLoggedIn] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogout = () => {
     setLoggedIn(false);
-    setEmail('');
-    setPassword('');
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -25,7 +25,11 @@ export default function Home() {
 
       {!loggedIn ? (
         <div className="w-full max-w-md">
-          <LoginForm setLoggedIn={setLoggedIn} setEmail={setEmail} setPassword={setPassword} />
+          <LoginForm
+            setLoggedIn={setLoggedIn}
+            setEmail={setEmail}
+            setPassword={setPassword}
+          />
         </div>
       ) : (
         <div className="w-full max-w-4xl">

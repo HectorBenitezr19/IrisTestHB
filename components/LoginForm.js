@@ -24,9 +24,24 @@ export default function LoginForm({ setLoggedIn, setEmail }) {
   const [password, setPassword] = useState('');
   const [isRegister, setIsRegister] = useState(false);
   const [message, setMessage] = useState('');
+  const [emailError, setEmailError] = useState('');
 
+  const validateEmail = (email) => {
+    // Basic validation for email with '@'
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateEmail(email)) {
+      setEmailError('Invalid email format');
+      return;
+    } else {
+      setEmailError('');
+    }
+
     try {
       const url = `/api/auth/${isRegister ? 'register' : 'login'}`;
       const res = await axios.post(url, { email, password });
@@ -52,6 +67,8 @@ export default function LoginForm({ setLoggedIn, setEmail }) {
               label="Email"
               value={email}
               onChange={(e) => setEmailInput(e.target.value)}
+              error={!!emailError}
+              helperText={emailError}
             />
             <TextField
               variant="outlined"
