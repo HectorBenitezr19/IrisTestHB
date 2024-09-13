@@ -35,5 +35,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+Instrucciones en español
 1. El usuario debe crear una cuenta nueva solamente con ingresar un mail y una clave de libre elección.
 2. Los datos de registro servirán para el Login ya que estos datos quedan almacenados en la base de datos MongoDB.
+3. Se pueden llenar tareas en cualquier fecha y estos registros quedaran guardados para futura consulta
+4. La edición se dejó para borrar las tareas que el usuario quiera, por tiempo no pude poner el update para modificar la tarea a elección ni agregar locales para tener varios idiomas con su botón de traducción
